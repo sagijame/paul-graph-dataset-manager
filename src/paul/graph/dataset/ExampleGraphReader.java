@@ -87,8 +87,6 @@ public class ExampleGraphReader {
 		System.out.println();
 	}
 	
-	public static final String EXAMPLE_FILES_PATH = "/paul/graph/data/dataset/";
-	
 	public static Graph getCelegansNetwork() {
 		return CElegansNetworkReader.getGraph();
 	}

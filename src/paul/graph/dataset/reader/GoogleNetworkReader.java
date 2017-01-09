@@ -3,7 +3,7 @@ package paul.graph.dataset.reader;
 import java.net.URL;
 import java.util.Iterator;
 
-import paul.graph.dataset.ExampleGraphReader;
+import paul.graph.dataset.data.ExampleNetworkPath;
 import paul.graph.data.io.TXTReader;
 import prefuse.data.Edge;
 import prefuse.data.Graph;
@@ -32,7 +32,7 @@ public class GoogleNetworkReader {
 	
 	public static Graph getGraph() {
 		
-		URL fileURL = GoogleNetworkReader.class.getResource(ExampleGraphReader.EXAMPLE_FILES_PATH + FILE_NAME);
+		URL fileURL = GoogleNetworkReader.class.getResource(ExampleNetworkPath.GOOGLE_NETWORK_PATH);
 		
 		Graph g = null;
 		TXTReader reader = new TXTReader(true, true);

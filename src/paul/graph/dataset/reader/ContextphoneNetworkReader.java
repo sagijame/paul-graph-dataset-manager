@@ -3,7 +3,7 @@ package paul.graph.dataset.reader;
 import java.net.URL;
 
 import paul.graph.algorithm.WeakComponentDetector;
-import paul.graph.dataset.ExampleGraphReader;
+import paul.graph.dataset.data.ExampleNetworkPath;
 import prefuse.data.Graph;
 import prefuse.data.io.DataIOException;
 import prefuse.data.io.GraphMLReader;
@@ -21,11 +21,11 @@ import prefuse.data.io.GraphMLReader;
  */
 public class ContextphoneNetworkReader {
 	
-public static final String FILE_NAME = "contextphone.graphml";
+	public static final String FILE_NAME = "contextphone.graphml";
 	
 	public static Graph getGraph() {
 		
-		URL fileURL = ContextphoneNetworkReader.class.getResource(ExampleGraphReader.EXAMPLE_FILES_PATH + FILE_NAME);
+		URL fileURL = ContextphoneNetworkReader.class.getResource(ExampleNetworkPath.CONTEXTPHONE_NETWORK_PATH);
 		
 		Graph g = null;
 		GraphMLReader reader = new GraphMLReader();

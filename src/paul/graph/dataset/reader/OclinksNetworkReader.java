@@ -3,7 +3,7 @@ package paul.graph.dataset.reader;
 import java.net.URL;
 
 import paul.graph.algorithm.WeakComponentDetector;
-import paul.graph.dataset.ExampleGraphReader;
+import paul.graph.dataset.data.ExampleNetworkPath;
 import paul.util.GraphLib;
 import prefuse.data.Graph;
 import prefuse.data.io.DataIOException;
@@ -36,7 +36,7 @@ public class OclinksNetworkReader {
 	
 	public static Graph getGraph() {
 		
-		URL fileURL = OclinksNetworkReader.class.getResource(ExampleGraphReader.EXAMPLE_FILES_PATH + FILE_NAME);
+		URL fileURL = OclinksNetworkReader.class.getResource(ExampleNetworkPath.OCLINKS_NETWORK_PATH);
 		
 		Graph g = null;
 		GraphMLReader reader = new GraphMLReader();

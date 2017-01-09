@@ -2,7 +2,7 @@ package paul.graph.dataset.reader;
 
 import java.net.URL;
 
-import paul.graph.dataset.ExampleGraphReader;
+import paul.graph.dataset.data.ExampleNetworkPath;
 import paul.graph.data.io.GMLReader;
 import prefuse.data.Graph;
 import prefuse.data.io.DataIOException;
@@ -27,7 +27,7 @@ public class CElegansNetworkReader {
 		
 	public static Graph getGraph() {
 		
-		URL fileURL = CElegansNetworkReader.class.getResource(ExampleGraphReader.EXAMPLE_FILES_PATH + FILE_NAME);
+		URL fileURL = CElegansNetworkReader.class.getResource(ExampleNetworkPath.CELEGANS_NETWORK_PATH);
 		
 		Graph g = null;
 		GMLReader reader = new GMLReader();

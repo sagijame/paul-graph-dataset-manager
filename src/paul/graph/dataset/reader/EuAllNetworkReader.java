@@ -4,7 +4,7 @@ import java.net.URL;
 import java.util.Iterator;
 
 import paul.graph.algorithm.WeakComponentDetector;
-import paul.graph.dataset.ExampleGraphReader;
+import paul.graph.dataset.data.ExampleNetworkPath;
 import paul.graph.data.io.TXTReader;
 import paul.util.GraphLib;
 import prefuse.data.Edge;
@@ -42,7 +42,7 @@ public class EuAllNetworkReader {
 	
 	public static Graph getGraph() {
 		
-		URL fileURL = EuAllNetworkReader.class.getResource(ExampleGraphReader.EXAMPLE_FILES_PATH + FILE_NAME);
+		URL fileURL = EuAllNetworkReader.class.getResource(ExampleNetworkPath.EUALL_NETWORK_PATH);
 		
 		Graph g = null;
 		TXTReader reader = new TXTReader(true, true);

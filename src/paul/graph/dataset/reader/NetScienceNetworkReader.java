@@ -4,7 +4,7 @@ import java.net.URL;
 import java.util.Iterator;
 
 import paul.graph.algorithm.WeakComponentDetector;
-import paul.graph.dataset.ExampleGraphReader;
+import paul.graph.dataset.data.ExampleNetworkPath;
 import prefuse.data.Edge;
 import prefuse.data.Graph;
 import prefuse.data.io.DataIOException;
@@ -27,7 +27,7 @@ public static final String FILE_NAME = "netscience.graphml";
 	
 	public static Graph getGraph() {
 		
-		URL fileURL = JazzNetworkReader.class.getResource(ExampleGraphReader.EXAMPLE_FILES_PATH + FILE_NAME);
+		URL fileURL = NetScienceNetworkReader.class.getResource(ExampleNetworkPath.NETSCIENCE_NETWORK_PATH);
 		
 		Graph g = null;
 		GraphMLReader reader = new GraphMLReader();
@@ -44,7 +44,7 @@ public static final String FILE_NAME = "netscience.graphml";
 	}
 	
 	public static Graph getLargestComponent() {
-		URL fileURL = NetScienceNetworkReader.class.getResource(ExampleGraphReader.EXAMPLE_FILES_PATH + "netscience_largest_component.graphml");
+		URL fileURL = NetScienceNetworkReader.class.getResource(ExampleNetworkPath.NETSCIENCE_LARGEST_COMPONENT_PATH);
 		
 		Graph g = null;
 		GraphMLReader reader = new GraphMLReader();

@@ -2,7 +2,7 @@ package paul.graph.dataset.reader;
 
 import java.net.URL;
 
-import paul.graph.dataset.ExampleGraphReader;
+import paul.graph.dataset.data.ExampleNetworkPath;
 import prefuse.data.Graph;
 import prefuse.data.io.DataIOException;
 import prefuse.data.io.GraphMLReader;
@@ -29,7 +29,7 @@ public static final String FILE_NAME = "friendship.graphml";
 	
 	public static Graph getGraph() {
 		
-		URL fileURL = FriendshipNetworkReader.class.getResource(ExampleGraphReader.EXAMPLE_FILES_PATH + FILE_NAME);
+		URL fileURL = FriendshipNetworkReader.class.getResource(ExampleNetworkPath.FRIENDSHIP_NETWORK_PATH);
 		
 		Graph g = null;
 		GraphMLReader reader = new GraphMLReader();

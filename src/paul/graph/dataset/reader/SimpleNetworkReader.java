@@ -2,7 +2,7 @@ package paul.graph.dataset.reader;
 
 import java.net.URL;
 
-import paul.graph.dataset.ExampleGraphReader;
+import paul.graph.dataset.data.ExampleNetworkPath;
 import paul.graph.data.io.TXTReader;
 import prefuse.data.Graph;
 import prefuse.data.io.DataIOException;
@@ -12,7 +12,7 @@ public class SimpleNetworkReader {
 	public static final String FILE_NAME = "simple_graph.txt";
 	
 	public static Graph getGraph() {
-		URL fileURL = SimpleNetworkReader.class.getResource(ExampleGraphReader.EXAMPLE_FILES_PATH + FILE_NAME);
+		URL fileURL = SimpleNetworkReader.class.getResource(ExampleNetworkPath.SIMPLE_GRAPH_PATH);
 		
 		Graph g = null;
 		TXTReader r = new TXTReader();

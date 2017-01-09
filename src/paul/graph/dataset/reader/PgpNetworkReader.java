@@ -2,7 +2,7 @@ package paul.graph.dataset.reader;
 
 import java.net.URL;
 
-import paul.graph.dataset.ExampleGraphReader;
+import paul.graph.dataset.data.ExampleNetworkPath;
 import paul.graph.data.io.NETReader;
 import prefuse.data.Graph;
 import prefuse.data.io.DataIOException;
@@ -31,7 +31,7 @@ public class PgpNetworkReader {
 	
 	public static Graph getGraph() {
 		
-		URL fileURL = JazzNetworkReader.class.getResource(ExampleGraphReader.EXAMPLE_FILES_PATH + FILE_NAME);
+		URL fileURL = JazzNetworkReader.class.getResource(ExampleNetworkPath.PGP_NETWORK_PATH);
 		
 		Graph g = null;
 		NETReader reader = new NETReader(false);

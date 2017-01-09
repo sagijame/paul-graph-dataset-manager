@@ -3,7 +3,7 @@ package paul.graph.dataset.reader;
 import java.net.URL;
 import java.util.Iterator;
 
-import paul.graph.dataset.ExampleGraphReader;
+import paul.graph.dataset.data.ExampleNetworkPath;
 import paul.graph.data.io.GMLReader;
 import prefuse.data.Edge;
 import prefuse.data.Graph;
@@ -29,7 +29,7 @@ public class KarateNetworkReader {
 	
 	public static Graph getGraph() {
 		
-		URL fileURL = KarateNetworkReader.class.getResource(ExampleGraphReader.EXAMPLE_FILES_PATH + FILE_NAME);
+		URL fileURL = KarateNetworkReader.class.getResource(ExampleNetworkPath.KARATE_NETWORK_PATH);
 		
 		Graph g = null;
 		GMLReader reader = new GMLReader();

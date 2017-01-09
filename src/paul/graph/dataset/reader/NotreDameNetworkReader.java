@@ -4,7 +4,7 @@ import java.net.URL;
 import java.util.Iterator;
 
 import paul.graph.algorithm.WeakComponentDetector;
-import paul.graph.dataset.ExampleGraphReader;
+import paul.graph.dataset.data.ExampleNetworkPath;
 import paul.graph.data.io.TXTReader;
 import prefuse.data.Edge;
 import prefuse.data.Graph;
@@ -30,7 +30,7 @@ public static final String FILE_NAME = "notredame.txt";
 	
 	public static Graph getGraph() {
 		
-		URL fileURL = NotreDameNetworkReader.class.getResource(ExampleGraphReader.EXAMPLE_FILES_PATH + FILE_NAME);
+		URL fileURL = NotreDameNetworkReader.class.getResource(ExampleNetworkPath.NOTREDAME_NETWORK_PATH);
 		
 		Graph g = null;
 		TXTReader reader = new TXTReader(true, false);
@@ -51,7 +51,7 @@ public static final String FILE_NAME = "notredame.txt";
 	}
 	
 	public static Graph getUndirectedGraph() {
-		URL fileURL = NotreDameNetworkReader.class.getResource(ExampleGraphReader.EXAMPLE_FILES_PATH + FILE_NAME);
+		URL fileURL = NotreDameNetworkReader.class.getResource(ExampleNetworkPath.NOTREDAME_NETWORK_PATH);
 		
 		Graph g = null;
 		TXTReader reader = new TXTReader(false, false);

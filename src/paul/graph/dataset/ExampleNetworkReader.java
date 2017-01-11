@@ -22,7 +22,7 @@ import paul.graph.dataset.reader.USAirportNetworkReader;
 import prefuse.data.Edge;
 import prefuse.data.Graph;
 
-public class ExampleGraphReader {
+public class ExampleNetworkReader {
 	
 	public static void main(String[] args) {
 		
